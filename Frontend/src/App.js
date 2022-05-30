@@ -5,6 +5,7 @@ import HomePage from './components/HomePage';
 import Dashboard from './components/Dashboard';
 import ReadBook from './components/ReadBook';
 import { CookiesProvider } from 'react-cookie';
+import Task from './components/Task';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <CookiesProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage></HomePage>}></Route>
+          <Route path="/" element={<Task />}></Route>
           <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
           <Route path="/readbook/:book" element={<ReadBook></ReadBook>}></Route>
           <Route path="*" element={<div>No Route Found</div>}></Route>
